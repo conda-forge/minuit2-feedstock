@@ -1,5 +1,5 @@
 {% set name = "minuit2" %}
-{% set version = "6.18.00" %}
+{% set version = "6-19-01" %}
 {% set build_number = 0 %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/root-project/root/archive/v{{ version|replace(".","-") }}.tar.gz
-  sha256: ee11687172a5d692a082ebfbeea4e0d5fb2f65db88968c0327d10793561c2c1b
+  sha256: 8187338d81a1b3d278b9c5137d6a3893e6455c0255b04ea1b4cb2a3a24b83925
   patches:
     - 0001-mathcore_standalone.patch
     - 0002-Add-project-to-allow-Clang-features-to-be-detected.patch
