@@ -5,11 +5,16 @@ Home: https://root.cern.ch/doc/master/Minuit2Page.html
 
 Package license: LGPL-2.1
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/minuit2-feedstock/blob/master/LICENSE.txt)
 
-Summary: This is the Minuit2 fitter standalone edition, from the ROOT toolkit.
+Summary: This is the C++ Minuit2 fitter standalone edition, from the ROOT toolkit.
 For information about the Minuit2 fitter, please see the documentation in ROOT.
+This is not a Python frontend to Minuit2, which is provided by the iminuit package.
 
+
+Development: https://github.com/root-project/root/
+
+Documentation: https://root.cern.ch/root/htmldoc/guides/users-guide/ROOTUsersGuide.html#minuit2-package
 
 The Minuit2 library is a new object-oriented implementation, written in C++, of the popular
 MINUIT minimization package. These new version provides basically all the functionality
@@ -18,7 +23,7 @@ computational performances. Furthermore, it contains new functionality, like the
 to set single side parameter limits or the FUMILI algorithm, which is an optimized method for
 least square and log likelihood minimizations. The package has been originally developed by
 M. Winkler and F. James. More information on the new C++ version can be found on the MINUIT
-Web Site.
+Web Site. This is not a Python frontend to Minuit2, which is provided by the iminuit package.
 
 
 Current build status
@@ -39,17 +44,17 @@ Current build status
         <table>
           <thead><tr><th>Variant</th><th>Status</th></tr></thead>
           <tbody><tr>
-              <td>linux</td>
+              <td>linux_64</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7127&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/minuit2-feedstock?branchName=master&jobName=linux&configuration=linux_" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/minuit2-feedstock?branchName=master&jobName=linux&configuration=linux_64_" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx</td>
+              <td>osx_64</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7127&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/minuit2-feedstock?branchName=master&jobName=osx&configuration=osx_" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/minuit2-feedstock?branchName=master&jobName=osx&configuration=osx_64_" alt="variant">
                 </a>
               </td>
             </tr>
@@ -58,13 +63,6 @@ Current build status
       </details>
     </td>
   </tr>
-  <tr>
-    <td>Windows</td>
-    <td>
-      <img src="https://img.shields.io/badge/Windows-disabled-lightgrey.svg" alt="Windows disabled">
-    </td>
-  </tr>
-![ppc64le disabled](https://img.shields.io/badge/ppc64le-disabled-lightgrey.svg)
 </table>
 
 Current release info
@@ -111,7 +109,7 @@ A feedstock is made up of a conda recipe (the instructions on what and how to bu
 the package) and the necessary configurations for automatic building using freely
 available continuous integration services. Thanks to the awesome service provided by
 [CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/)
-and [TravisCI](https://travis-ci.org/) it is possible to build and upload installable
+and [TravisCI](https://travis-ci.com/) it is possible to build and upload installable
 packages to the [conda-forge](https://anaconda.org/conda-forge)
 [Anaconda-Cloud](https://anaconda.org/) channel for Linux, Windows and OSX respectively.
 
