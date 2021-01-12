@@ -1,6 +1,6 @@
 {% set name = "minuit2" %}
-{% set version = "6.18.00" %}
-{% set build_number = 1 %}
+{% set version = "6.22.06" %}
+{% set build_number = 0 %}
 
 package:
   name: {{ name|lower }}
@@ -8,14 +8,14 @@ package:
 
 source:
   url: https://github.com/root-project/root/archive/v{{ version|replace(".","-") }}.tar.gz
-  sha256: ee11687172a5d692a082ebfbeea4e0d5fb2f65db88968c0327d10793561c2c1b
+  sha256: 81fe6403a3cf51bb1c411f240d9c233473a833e5738b3abf68ed55d0d27ce1cd
   patches:
     - 0001-mathcore_standalone.patch
     - 0002-Add-project-to-allow-Clang-features-to-be-detected.patch
 
 build:
   # Give standalone a higher priority by bumping the build number by 100
-  number: {{ build_number if minuit2_variant == "root" else build_number+100}}
+  number: {{ build_number if minuit2_variant == "root" else build_number+100 }}
   skip: True  # [win]
   run_exports:
     - {{ pin_subpackage('minuit2', max_pin='x.x') }}
@@ -78,7 +78,7 @@ outputs:
 {% endif %}
     requirements:
       run:
-        - {{ minuit2_variant }} ={{version}}
+        - {{ minuit2_variant }} ={{ version }}
     test:
       commands:
         - test -f ${PREFIX}/lib/libMinuit2${SHLIB_EXT}  # [unix]
@@ -86,7 +86,7 @@ outputs:
 
 about:
   home: https://root.cern.ch/doc/master/Minuit2Page.html
-  license: LGPL-2.1
+  license: LGPL-2.1-only
   license_family: LGPL
   license_file: LICENSE
   doc_url: https://root.cern.ch/root/htmldoc/guides/users-guide/ROOTUsersGuide.html#minuit2-package
