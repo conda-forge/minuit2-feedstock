@@ -1,5 +1,5 @@
 {% set name = "minuit2" %}
-{% set version = "6.22.06" %}
+{% set version = "6-26-02" %}
 {% set build_number = 0 %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/root-project/root/archive/v{{ version|replace(".","-") }}.tar.gz
-  sha256: 81fe6403a3cf51bb1c411f240d9c233473a833e5738b3abf68ed55d0d27ce1cd
+  sha256: 0818285a4cd61db5bec1899c8122d279f8a68c981551cb12aa3cd1e0782b63fe
   patches:
     - 0001-mathcore_standalone.patch
     - 0002-Add-project-to-allow-Clang-features-to-be-detected.patch
@@ -16,7 +16,7 @@ source:
 build:
   # Give standalone a higher priority by bumping the build number by 100
   number: {{ build_number if minuit2_variant == "root" else build_number+100 }}
-  skip: True  # [win]
+  skip: true  # [win]
   run_exports:
     - {{ pin_subpackage('minuit2', max_pin='x.x') }}
 
@@ -92,18 +92,18 @@ about:
   doc_url: https://root.cern.ch/root/htmldoc/guides/users-guide/ROOTUsersGuide.html#minuit2-package
   dev_url: https://github.com/root-project/root/
   summary: |
-      This is the C++ Minuit2 fitter standalone edition, from the ROOT toolkit.
-      For information about the Minuit2 fitter, please see the documentation in ROOT.
-      This is not a Python frontend to Minuit2, which is provided by the iminuit package.
+    This is the C++ Minuit2 fitter standalone edition, from the ROOT toolkit.
+    For information about the Minuit2 fitter, please see the documentation in ROOT.
+    This is not a Python frontend to Minuit2, which is provided by the iminuit package.
   description: |
-      The Minuit2 library is a new object-oriented implementation, written in C++, of the popular
-      MINUIT minimization package. These new version provides basically all the functionality
-      present in the old Fortran version, with almost equivalent numerical accuracy and
-      computational performances. Furthermore, it contains new functionality, like the possibility
-      to set single side parameter limits or the FUMILI algorithm, which is an optimized method for
-      least square and log likelihood minimizations. The package has been originally developed by
-      M. Winkler and F. James. More information on the new C++ version can be found on the MINUIT
-      Web Site. This is not a Python frontend to Minuit2, which is provided by the iminuit package.
+    The Minuit2 library is a new object-oriented implementation, written in C++, of the popular
+    MINUIT minimization package. These new version provides basically all the functionality
+    present in the old Fortran version, with almost equivalent numerical accuracy and
+    computational performances. Furthermore, it contains new functionality, like the possibility
+    to set single side parameter limits or the FUMILI algorithm, which is an optimized method for
+    least square and log likelihood minimizations. The package has been originally developed by
+    M. Winkler and F. James. More information on the new C++ version can be found on the MINUIT
+    Web Site. This is not a Python frontend to Minuit2, which is provided by the iminuit package.
 
 
 extra:
