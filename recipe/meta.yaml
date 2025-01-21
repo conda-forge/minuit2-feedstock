@@ -22,6 +22,7 @@ build:
 
 requirements:
   build:
+    - {{ stdlib("c") }}
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
 
@@ -35,6 +36,7 @@ outputs:
       build:
         - cmake
         - make
+        - {{ stdlib("c") }}
         - {{ compiler('c') }}
         - {{ compiler('cxx') }}
       # Mark the standalone package as conflicting with ROOT
