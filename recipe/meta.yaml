@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/root-project/root/archive/v{{ version|replace(".","-") }}.tar.gz
-  sha256: 6a7890b79231b94e20d5e6c4da64303b6a5fc30639359973c2fae566771fd81e
+  sha256: 332c763d2d5eb8a759893453637f24b3900476f73a1a4c7a205f8f7b3104f449
   patches:
     - 0001-mathcore_standalone.patch
     - 0002-Add-project-to-allow-Clang-features-to-be-detected.patch
