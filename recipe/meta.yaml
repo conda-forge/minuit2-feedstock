@@ -16,7 +16,7 @@ source:
 build:
   # Give standalone a higher priority by bumping the build number by 100
   number: {{ build_number if minuit2_variant == "root" else build_number+100 }}
-  skip: True  # [win]
+  skip: True  # [win or osx]
   run_exports:
     - {{ pin_subpackage('minuit2', max_pin='x.x') }}
 
