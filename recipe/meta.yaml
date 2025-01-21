@@ -1,6 +1,6 @@
 {% set name = "minuit2" %}
 {% set version = "6.22.06" %}
-{% set build_number = 0 %}
+{% set build_number = 1 %}
 
 package:
   name: {{ name|lower }}
@@ -16,12 +16,13 @@ source:
 build:
   # Give standalone a higher priority by bumping the build number by 100
   number: {{ build_number if minuit2_variant == "root" else build_number+100 }}
-  skip: True  # [win]
+  skip: True  # [win or osx]
   run_exports:
     - {{ pin_subpackage('minuit2', max_pin='x.x') }}
 
 requirements:
   build:
+    - {{ stdlib("c") }}
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
 
@@ -35,11 +36,12 @@ outputs:
       build:
         - cmake
         - make
+        - {{ stdlib("c") }}
         - {{ compiler('c') }}
         - {{ compiler('cxx') }}
       # Mark the standalone package as conflicting with ROOT
       run_constrained:
-        - root =99999
+        - root ==99999
     test:
       commands:
         - test -f ${PREFIX}/lib/libMinuit2${SHLIB_EXT}  # [unix]
