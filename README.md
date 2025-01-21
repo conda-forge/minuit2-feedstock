@@ -85,7 +85,6 @@ Current release info
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-minuit2-green.svg)](https://anaconda.org/conda-forge/minuit2) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/minuit2.svg)](https://anaconda.org/conda-forge/minuit2) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/minuit2.svg)](https://anaconda.org/conda-forge/minuit2) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/minuit2.svg)](https://anaconda.org/conda-forge/minuit2) |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-minuit2_standalone-green.svg)](https://anaconda.org/conda-forge/minuit2_standalone) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/minuit2_standalone.svg)](https://anaconda.org/conda-forge/minuit2_standalone) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/minuit2_standalone.svg)](https://anaconda.org/conda-forge/minuit2_standalone) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/minuit2_standalone.svg)](https://anaconda.org/conda-forge/minuit2_standalone) |
 
 Installing minuit2
 ==================
@@ -97,16 +96,16 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `minuit2, minuit2_standalone` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `minuit2` can be installed with `conda`:
 
 ```
-conda install minuit2 minuit2_standalone
+conda install minuit2
 ```
 
 or with `mamba`:
 
 ```
-mamba install minuit2 minuit2_standalone
+mamba install minuit2
 ```
 
 It is possible to list all of the versions of `minuit2` available on your platform with `conda`:

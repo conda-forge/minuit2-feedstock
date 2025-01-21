@@ -6,6 +6,10 @@ c_compiler:
 - clang
 c_compiler_version:
 - '18'
+c_stdlib:
+- macosx_deployment_target
+c_stdlib_version:
+- '11.0'
 channel_sources:
 - conda-forge
 channel_targets:
@@ -16,9 +20,6 @@ cxx_compiler_version:
 - '18'
 macos_machine:
 - arm64-apple-darwin20.0.0
-minuit2_variant:
-- minuit2_standalone
-- root
 target_platform:
 - osx-arm64
 zip_keys:
