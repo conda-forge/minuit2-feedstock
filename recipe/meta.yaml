@@ -11,7 +11,7 @@ source:
   sha256: 332c763d2d5eb8a759893453637f24b3900476f73a1a4c7a205f8f7b3104f449
   patches:
     - 0001-mathcore_standalone.patch
-    - 0002-Add-project-to-allow-Clang-features-to-be-detected.patch
+    # - 0002-Add-project-to-allow-Clang-features-to-be-detected.patch
 
 build:
   # Give standalone a higher priority by bumping the build number by 100
