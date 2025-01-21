@@ -41,7 +41,7 @@ outputs:
         - {{ compiler('cxx') }}
       # Mark the standalone package as conflicting with ROOT
       run_constrained:
-        - root =99999
+        - root ==99999
     test:
       commands:
         - test -f ${PREFIX}/lib/libMinuit2${SHLIB_EXT}  # [unix]
