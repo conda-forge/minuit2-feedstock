@@ -1,5 +1,5 @@
 {% set name = "minuit2" %}
-{% set version = "6.32.2" %}
+{% set version = "6.32.02" %}
 {% set build_number = 0 %}
 
 package:
