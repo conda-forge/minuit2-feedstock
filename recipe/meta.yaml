@@ -1,4 +1,4 @@
-{% set name = "minuit2" %}
+{% set name = "minuit2-split" %}
 {% set version = "6.22.06" %}
 
 package:
@@ -17,12 +17,6 @@ build:
   skip: True  # [win]
   run_exports:
     - {{ pin_subpackage('minuit2', max_pin='x.x') }}
-
-requirements:
-  build:
-    - {{ stdlib("c") }}
-    - {{ compiler('c') }}
-    - {{ compiler('cxx') }}
 
 outputs:
   - name: minuit2
@@ -98,6 +92,7 @@ about:
     Web Site. This is not a Python frontend to Minuit2, which is provided by the iminuit package.
 
 extra:
+  feedstock-name: minuit2
   recipe-maintainers:
     - mwittgen
     - brianv0
