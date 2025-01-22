@@ -25,7 +25,7 @@ requirements:
     - {{ compiler('cxx') }}
 
 outputs:
-  - name: minuit2_standalone
+  - name: minuit2
     version: {{ version|replace("-", ".") }}
     build:
       script: bash ${RECIPE_DIR}/build_standalone.sh
@@ -36,7 +36,7 @@ outputs:
         - {{ stdlib("c") }}
         - {{ compiler('c') }}
         - {{ compiler('cxx') }}
-      # Mark the standalone package as conflicting with ROOT
+      # conflicts with root due to same libs
       run_constrained:
         - root ==99999
     test:
@@ -63,13 +63,14 @@ outputs:
         - math/minuit2/build/lib/libGaussSim.*
         - math/minuit2/build/test/MnSim/*.txt
 
-  - name: minuit2
+  - name: minuit2_standalone
     version: {{ version|replace("-", ".") }}
-    build:
-      string: minuit2_standalone
     requirements:
       run:
-        - minuit2_standalone =={{ version|replace("-", ".") }}
+        - {{ pin_subpackage('minuit2', exact=True }}
+      # Mark the standalone package as conflicting with ROOT
+      run_constrained:
+        - root ==99999
     test:
       commands:
         - test -f ${PREFIX}/lib/libMinuit2${SHLIB_EXT}  # [unix]
