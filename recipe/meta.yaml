@@ -67,7 +67,7 @@ outputs:
     version: {{ version|replace("-", ".") }}
     requirements:
       run:
-        - {{ pin_subpackage('minuit2', exact=True }}
+        - {{ pin_subpackage('minuit2', exact=True) }}
       # Mark the standalone package as conflicting with ROOT
       run_constrained:
         - root ==99999
