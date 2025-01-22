@@ -26,7 +26,7 @@ requirements:
 
 outputs:
   - name: minuit2_standalone
-    version: {{ version }}
+    version: {{ version|replace("-", ".") }}
     build:
       script: bash ${RECIPE_DIR}/build_standalone.sh
     requirements:
@@ -64,12 +64,12 @@ outputs:
         - math/minuit2/build/test/MnSim/*.txt
 
   - name: minuit2
-    version: {{ version }}
+    version: {{ version|replace("-", ".") }}
     build:
       string: minuit2_standalone
     requirements:
       run:
-        - minuit2_standalone =={{ version }}
+        - minuit2_standalone =={{ version|replace("-", ".") }}
     test:
       commands:
         - test -f ${PREFIX}/lib/libMinuit2${SHLIB_EXT}  # [unix]
