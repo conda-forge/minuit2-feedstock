@@ -57,6 +57,20 @@ Current build status
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/minuit2-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_" alt="variant">
                 </a>
               </td>
+            </tr><tr>
+              <td>osx_64</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7127&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/minuit2-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7127&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/minuit2-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_" alt="variant">
+                </a>
+              </td>
             </tr>
           </tbody>
         </table>
@@ -71,6 +85,7 @@ Current release info
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-minuit2-green.svg)](https://anaconda.org/conda-forge/minuit2) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/minuit2.svg)](https://anaconda.org/conda-forge/minuit2) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/minuit2.svg)](https://anaconda.org/conda-forge/minuit2) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/minuit2.svg)](https://anaconda.org/conda-forge/minuit2) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-minuit2_standalone-green.svg)](https://anaconda.org/conda-forge/minuit2_standalone) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/minuit2_standalone.svg)](https://anaconda.org/conda-forge/minuit2_standalone) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/minuit2_standalone.svg)](https://anaconda.org/conda-forge/minuit2_standalone) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/minuit2_standalone.svg)](https://anaconda.org/conda-forge/minuit2_standalone) |
 
 Installing minuit2
 ==================
@@ -82,16 +97,16 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `minuit2` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `minuit2, minuit2_standalone` can be installed with `conda`:
 
 ```
-conda install minuit2
+conda install minuit2 minuit2_standalone
 ```
 
 or with `mamba`:
 
 ```
-mamba install minuit2
+mamba install minuit2 minuit2_standalone
 ```
 
 It is possible to list all of the versions of `minuit2` available on your platform with `conda`:
@@ -186,6 +201,7 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@beckermr](https://github.com/beckermr/)
 * [@brianv0](https://github.com/brianv0/)
 * [@mwittgen](https://github.com/mwittgen/)
 
