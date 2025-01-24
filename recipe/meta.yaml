@@ -10,7 +10,6 @@ source:
   sha256: 1d55b4d529076c7fef64aad1698d30c4180780399c8d974c953255119fc3b966
   patches:
     - 0001-mathcore_standalone.patch
-    - 0002-Add-project-to-allow-Clang-features-to-be-detected.patch
 
 build:
   number: 0
