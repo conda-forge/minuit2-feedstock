@@ -205,6 +205,3 @@ Feedstock Maintainers
 * [@brianv0](https://github.com/brianv0/)
 * [@mwittgen](https://github.com/mwittgen/)
 
-
-<!-- dummy commit to enable rerendering -->
-

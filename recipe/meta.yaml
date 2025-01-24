@@ -1,5 +1,5 @@
 {% set name = "minuit2-split" %}
-{% set version = "6.22.06" %}
+{% set version = "6-34-02" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://github.com/root-project/root/archive/v{{ version|replace(".","-") }}.tar.gz
-  sha256: 81fe6403a3cf51bb1c411f240d9c233473a833e5738b3abf68ed55d0d27ce1cd
+  sha256: 1d55b4d529076c7fef64aad1698d30c4180780399c8d974c953255119fc3b966
   patches:
     - 0001-mathcore_standalone.patch
     - 0002-Add-project-to-allow-Clang-features-to-be-detected.patch
 
 build:
-  number: 102
-  skip: True  # [win]
+  number: 0
+  skip: true  # [win]
   run_exports:
     - {{ pin_subpackage('minuit2', max_pin='x.x') }}
 
