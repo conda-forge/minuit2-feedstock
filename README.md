@@ -85,7 +85,7 @@ Current release info
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-minuit2-green.svg)](https://anaconda.org/conda-forge/minuit2) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/minuit2.svg)](https://anaconda.org/conda-forge/minuit2) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/minuit2.svg)](https://anaconda.org/conda-forge/minuit2) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/minuit2.svg)](https://anaconda.org/conda-forge/minuit2) |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-minuit2_standalone-green.svg)](https://anaconda.org/conda-forge/minuit2_standalone) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/minuit2_standalone.svg)](https://anaconda.org/conda-forge/minuit2_standalone) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/minuit2_standalone.svg)](https://anaconda.org/conda-forge/minuit2_standalone) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/minuit2_standalone.svg)](https://anaconda.org/conda-forge/minuit2_standalone) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-minuit2__standalone-green.svg)](https://anaconda.org/conda-forge/minuit2_standalone) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/minuit2_standalone.svg)](https://anaconda.org/conda-forge/minuit2_standalone) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/minuit2_standalone.svg)](https://anaconda.org/conda-forge/minuit2_standalone) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/minuit2_standalone.svg)](https://anaconda.org/conda-forge/minuit2_standalone) |
 
 Installing minuit2
 ==================
