@@ -1,5 +1,5 @@
 {% set name = "minuit2-split" %}
-{% set version = "6-34-02" %}
+{% set version = "6-37-01" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/root-project/root/archive/v{{ version|replace(".","-") }}.tar.gz
-  sha256: 1d55b4d529076c7fef64aad1698d30c4180780399c8d974c953255119fc3b966
+  sha256: f1fee1fe85283a70d301a2e6a2d8717aafcfe2338219d2b595aac2e3ca1560dc
   patches:
     - 0001-mathcore_standalone.patch
 
